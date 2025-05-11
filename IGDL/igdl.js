@@ -18,7 +18,7 @@ break
 
 
 //==========[ IGDL PENJELASAN ]==========\\
-case 'igdl222': {
+case 'igdl': {
   // Cek apakah teks yang dikirim mengandung link Instagram
   if (!text.includes('instagram.com')) return m.reply(`Masukkan link *Instagram-nya* ?\n*Contoh:* ${prefix + command} https://www.instagram.com/reel/xxxxx`);
   
