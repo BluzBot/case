@@ -1,5 +1,9 @@
 //==========[ IGDL ]==========\\
 case 'igdl': {
+async function check(url) {
+    const resp = await require("axios").get(url);
+    return resp.headers["content-type"].split("/")[0]
+    }
   if (!text.includes('instagram.com')) return m.reply(`Masukkan link *Instagram-nya* ?\n*Contoh:* ${prefix + command} https://www.instagram.com/reel/xxxxx`);
   const url = text;
   m.reply(`Mohon tunggu sebentar...`);
@@ -19,6 +23,11 @@ break
 
 //==========[ IGDL PENJELASAN ]==========\\
 case 'igdl': {
+  //cek apakah url itu video atau image
+  async function check(url) {
+    const resp = await require("axios").get(url);
+    return resp.headers["content-type"].split("/")[0]
+    }
   // Cek apakah teks yang dikirim mengandung link Instagram
   if (!text.includes('instagram.com')) return m.reply(`Masukkan link *Instagram-nya* ?\n*Contoh:* ${prefix + command} https://www.instagram.com/reel/xxxxx`);
   
